@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from topics.models import Topic
 
+topic_list = ['Hello, World', 'Variables and Types', 'Lists', 'Basic Operators', 'String Formatting', 
+              'Basic String Operations', 'Conditions', 'Loops', 'Functions']
+for i in range(len(topic_list)):
+    Topic.objects.create(title=topic_list[i])
+
 def topic_index(request):
     topics = Topic.objects.all()
     context = {
