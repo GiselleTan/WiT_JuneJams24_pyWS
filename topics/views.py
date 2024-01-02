@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from topics.models import Topic
 
-# Uncomment to delete topics
-# Topic.objects.all().delete()
 topics_dict = {
     "topic1" : {
         "title": 'Hello, World',
@@ -51,9 +49,14 @@ topics_dict = {
         "definition": ''
     },
 }
-# Uncomment to add topics
-# for topic in topics_dict:
-#    Topic.objects.create(title=topics_dict[topic]["title"], definition=topics_dict[topic]["definition"])
+
+def reset_topics():
+    Topic.objects.all().delete()
+    for topic in topics_dict:
+        Topic.objects.create(title=topics_dict[topic]["title"], definition=topics_dict[topic]["definition"])
+
+# Uncomment to reset topics stored in database
+# reset_topics()
 
 def topic_index(request):
     topics = Topic.objects.all()
