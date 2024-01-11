@@ -1,13 +1,23 @@
+{% extends "base.html" %}
+
 {% block page_content %}
-<button onclick="location.href = '/login'">Login</button>
-<h1>Topics</h1>
+<div class="row">
+    <h1 class="col">Topics</h1>
+    <button class="col-2 btn btn-primary m-2" onclick="location.href = '/login'">Login</button> 
+</div>
 <div class="row">
 {% for topic in topics %}
-    <a href="{% url 'topic_detail' topic.pk %}"
+    <!-- <a href="{% url 'topic_detail' topic.pk %}"
         class="btn btn-primary">
         {{ topic.title }}
-    </a>
-    <br>
+    </a> -->
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <a class="card-body" href="{% url 'topic_detail' topic.pk %}">
+                <h5 class="card-title">{{ topic.title }}</h5>
+            </a>
+        </div>
+    </div>
     {% endfor %}
 </div>
 {% endblock %}
