@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import LoginForm
+from .forms import LoginForm, SignupForm
 
 
 
@@ -19,3 +19,8 @@ def login_view(request):
         form = LoginForm()
 
     return render(request, 'login.html', {'form': form})
+
+def signup_view(request):
+    if request.method == 'GET':
+        form = SignupForm()
+        return render(request, 'signup.html', {'form': form})   
