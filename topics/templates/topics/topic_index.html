@@ -3,8 +3,12 @@
 {% block page_content %}
 <div class="row">
     <h1 class="col">Topics</h1>
-    <button class="col-2 btn btn-primary m-2" onclick="location.href = '/account/signup'">Sign up</button>
-    <button class="col-2 btn btn-primary m-2" onclick="location.href = '/account/login'">Login</button> 
+    {% if request.user.is_authenticated %}
+        <button class="col-2 btn btn-primary m-2">Logout</button> 
+    {% else %}
+        <button class="col-2 btn btn-primary m-2" onclick="location.href = '/account/signup'">Sign up</button>
+        <button class="col-2 btn btn-primary m-2" onclick="location.href = '/account/login'">Login</button> 
+    {% endif %}
 </div>
 <div class="row">
 {% for topic in topics %}
