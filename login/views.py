@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import LoginForm, SignupForm
 
@@ -22,3 +22,7 @@ def signup_view(request):
     if request.method == 'GET':
         form = SignupForm()
         return render(request, 'signup.html', {'form': form})   
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
