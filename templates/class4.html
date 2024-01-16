@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/class.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a class="reg" href="#signup">Sign Up</a>
+        <a class="reg" href="#signin">Sign In</a>
+      </div>
+
+    <h1>A guide on Lists in Python</h1>
+    <p class="desc">Exploring List indexing, slicing and mutation. in Python.</p>
+
+    <h2 class="first">Indexing in Lists</h2>
+    <div class="point">
+        <h3>1. Understanding Iterables</h3>
+        <p>In Python, lists are a type of iterable. Iterables are objects that you can iterate over, meaning you can traverse through all the different elements contained within the object.</p>
+        <pre class="example">
+    randomItems = [4, 6, 2, 56, 23, 623, 453]  # This is a list
+    for item in randomItems:
+        print(item)  # This will print each item in the list
+        </pre>
+    </div>
+    <div class="point">
+        <h3>2. What is Indexing?</h3>
+        <p>Indexing in Python is a way to refer to the individual items within an iterable by their position. In other words, you can directly access your elements of choice within an iterable and do various operations depending on your needs.</p>
+    </div>
+    <div class="point">
+        <h3>3. Zero-Indexed</h3>
+        <p>In Python, objects are “zero-indexed” meaning the position count starts at zero. So, if there are 5 elements present within a list, then the first element (i.e., the leftmost element) holds the “zeroth” position, followed by the elements in the first, second, third, and fourth positions.</p>
+        <pre class="example">
+    fruits = ["apple", "grape", "orange", "guava", "banana"]
+    print(fruits[0])  # This will print "apple"
+    print(fruits[1])  # This will print "grape"
+        </pre>
+    </div>
+    <div class="point">
+        <h3>4. Python Index Method</h3>
+        <p>The index of a specific item within a list can be revealed when the index() method is called on the list with the item name passed as an argument.</p>
+        <pre class="example">
+    fruits = ["apple", "grape", "orange", "guava", "banana"]
+    print("Index of Apple: ", fruits.index("apple"))  # This will print "Index of Apple: 0"
+    print("Index of Banana: ", fruits.index("banana"))  # This will print "Index of Banana: 4"
+        </pre>
+    </div>
+    <div class="point">
+        <h3>5. Python Index Operator</h3>
+        <p>The Python Index Operator is represented by opening and closing square brackets: []. You can use it to access elements at a specific index.</p>
+        <pre class="example">
+    fruits = ["apple", "grape", "orange", "guava", "banana"]
+    print(fruits[0])  # This will print "apple"
+    print(fruits[3])  # This will print "guava"
+        </pre>
+    </div>
+    <div class="point">
+        <h3>6. IndexError</h3>
+        <p>Remember, trying to access an index outside the range of the list (for example, fruits[10] when the list only has 5 elements) will result in an IndexError.</p>
+    </div>
+
+    <h2>Slicing Lists</h2>
+<div class="point">
+    <h3>1. Understanding List Indexing</h3>
+    <p>In Python, the first element of the list has the index number 0, and the last element of the list has the index number N-1, where N is the total number of elements in the list.</p>
+    <pre class="example">
+Lst = [50, 70, 30, 20, 90, 10, 50]
+print(Lst[0])  # Output: 50 (first element)
+print(Lst[-1])  # Output: 50 (last element)
+    </pre>
+</div>
+<div class="point">
+    <h3>2. Basic List Slicing</h3>
+    <p>The syntax for list slicing in Python is Lst[Initial:End:IndexJump]. This returns a portion of the list from index Initial to index End, at a step size IndexJump.</p>
+    <pre class="example">
+Lst = [50, 70, 30, 20, 90, 10, 50]
+print(Lst[1:5])  # Output: [70, 30, 20, 90]
+    </pre>
+</div>
+<div class="point">
+    <h3>3. Slicing with Positive Indexes</h3>
+    <p>You can slice a list using positive indexes.</p>
+    <pre class="example">
+Lst = [50, 70, 30, 20, 90, 10, 50]
+print(Lst[::])  # Output: [50, 70, 30, 20, 90, 10, 50]
+    </pre>
+</div>
+<div class="point">
+    <h3>4. Slicing with Negative Indexes</h3>
+    <p>Negative indexing starts from the end of the list.</p>
+    <pre class="example">
+Lst = [50, 70, 30, 20, 90, 10, 50]
+print(Lst[-7::1])  # Output: [50, 70, 30, 20, 90, 10, 50]
+    </pre>
+</div>
+<div class="point">
+    <h3>5. Skipping Elements with Step Parameter</h3>
+    <p>You can use the step parameter to skip elements while slicing.</p>
+    <pre class="example">
+List = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(List[::2])  # Output: [1, 3, 5, 7, 9]
+    </pre>
+</div>
+<div class="point">
+    <h3>6. Reversing a List</h3>
+    <p>You can reverse a list by using a negative step parameter.</p>
+    <pre class="example">
+List = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(List[::-1])  # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    </pre>
+</div>
+
+    <h2>Mutating Lists</h2>
+<div class="point">
+    <h3>1. Appending</h3>
+    <p>You can use the append method to add an element to the end of a list. For example:</p>
+    <pre class="example">
+L = [1, 2, 3]
+L.append(4) # L is now [1, 2, 3, 4]
+    </pre>
+</div>
+<div class="point">
+    <h3>2. Inserting</h3>
+    <p>You can use the insert method to insert an element at a specific index in a list. For example:</p>
+    <pre class="example">
+L = [1, 2, 3]
+L.insert(1, 10) # L is now [1, 10, 2, 3]
+    </pre>
+</div>
+<div class="point">
+    <h3>3. Removing</h3>
+    <p>You can use the remove method to remove the first occurrence of an element from a list. For example:</p>
+    <pre class="example">
+L = [1, 2, 3, 2]
+L.remove(2) # L is now [1, 3, 2]
+    </pre>
+</div>
+<div class="point">
+    <h3>4. Popping</h3>
+    <p>You can use the pop method to remove and return the last element of a list. For example:</p>
+    <pre class="example">
+L = [1, 2, 3]
+x = L.pop() # x is 3 and L is now [1, 2]
+    </pre>
+</div>
+<div class="point">
+    <h3>5. Sorting</h3>
+    <p>You can use the sort method to sort the elements of a list in place. For example:</p>
+    <pre class="example">
+L = [5, 2, 4, 1, 3]
+L.sort() # L is now [1, 2, 3, 4, 5]
+    </pre>
+</div>
+
+
+</body>
+</html>

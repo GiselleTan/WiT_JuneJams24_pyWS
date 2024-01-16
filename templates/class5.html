@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/class.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a class="reg" href="#signup">Sign Up</a>
+        <a class="reg" href="#signin">Sign In</a>
+      </div>
+
+    <h1>Learning about Loops & List Comprehensions</h1>
+    <p class="desc">Learn about For and While loops, together with a popular feature in Python known as List Comprehensions.</p>
+
+    <h2 class="first">While Loops</h2>
+<div class="point">
+    <h3>1. What is a while loop?</h3>
+    <p>A while loop in Python is a way to repeat a block of code as long as a certain condition is true. For example, you can use a while loop to print the numbers from 1 to 10:</p>
+    <pre class="example">n = 1
+while n <= 10:
+    print(n)
+    n = n + 1
+    </pre>
+    <p>This code will print the numbers from 1 to 10, one per line. The loop will stop when n becomes greater than 10.</p>
+</div>
+<div class="point">
+    <h3>2. How to write a while loop?</h3>
+    <p>The general syntax of a while loop in Python is:</p>
+    <pre class="example">while condition:
+    # do something
+    </pre>
+    <p>The condition is any expression that evaluates to a Boolean value (True or False). The loop will keep running as long as the condition is True. If the condition is False, the loop will end and the program will continue with the next statement after the loop.</p>
+</div>
+<div class="point">
+    <h3>3. How to initialize variables for a while loop?</h3>
+    <p>You need to initialize any variables that are used in the condition before the loop starts.</p>
+    <pre class="example">x = 3 # this line
+while x <= 10:
+    print(n)
+    n = n + 5
+            </pre>
+</div>
+<div class="point">
+    <h3>4. How to update variables in a while loop?</h3>
+    <p>You need to update or change the variables that are used in the condition inside the loop. Otherwise, the loop will run forever and create an infinite loop. For example, in the above code, we incremented n by 1 inside the loop.</p>
+    <pre class="example">x = 3
+while x <= 10:
+    print(n)
+    n = n + 5 # this line
+            </pre>
+</div>
+<div class="point">
+    <h3>5. How to exit a while loop prematurely?</h3>
+    <p>You can use the break statement to exit the loop prematurely, even if the condition is still True. For example, you can use a break statement to stop the loop when n reaches 5:</p>
+    <pre class="example">n = 1
+while n <= 10:
+    print(n)
+    if n == 5:
+        break
+    n = n + 1
+    </pre>
+    <p>This code will print the numbers from 1 to 5, and then stop the loop.</p>
+</div>
+<div class="point">
+    <h3>6. How to skip an iteration of a while loop?</h3>
+    <p>You can use the continue statement to skip the current iteration of the loop and move to the next one, without checking the condition. For example, you can use a continue statement to skip the even numbers and only print the odd numbers:</p>
+    <pre class="example">n = 1
+while n <= 10:
+    if n % 2 == 0:
+        n = n + 1
+        continue
+    print(n)
+    n = n + 1
+    </pre>
+    <p>This code will print the odd numbers from 1 to 9, and skip the even numbers.</p>
+</div>
+<div class="point">
+    <h3>7. How to execute a block of code after a while loop?</h3>
+    <p>You can use an else clause after the while loop to execute a block of code once the condition becomes False. For example, you can use an else clause to print a message when the loop ends:</p>
+    <pre class="example">n = 1
+while n <= 10:
+    print(n)
+    n = n + 1
+else:
+    print("The loop is over")
+    </pre>
+    <p>This code will print the numbers from 1 to 10, and then print "The loop is over".</p>
+</div>
+
+
+    <h2>For Loops</h2>
+<div class="point">
+    <h3>1. What is a for loop?</h3>
+    <p>A for loop in Python is a way to repeat a block of code for each item in a sequence, such as a list, a tuple, a dictionary, or a string. For example, you can use a for loop to print each fruit in a fruit list:</p>
+    <pre class="example">
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+    </pre>
+    <p>This code will print:</p>
+    <pre class="output">
+apple
+banana
+cherry
+    </pre>
+</div>
+<div class="point">
+    <h3>2. How to write a for loop?</h3>
+    <p>The syntax for the for loop in Python is:</p>
+    <pre class="example">
+for variable in iterable:
+    # do something
+    </pre>
+    <p>The variable is a name that you choose to refer to the current item in the sequence. The iterable is any object that can return one item at a time, such as a list, a tuple, a dictionary, a set, or a string.</p>
+</div>
+<div class="point">
+    <h3>3. How to exit a for loop prematurely?</h3>
+    <p>You can use the break statement to stop the loop before it has looped through all the items. For example, you can use a break statement to exit the loop when x is "banana":</p>
+    <pre class="example">
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+    if x == "banana":
+        break
+    </pre>
+    <p>This code will print:</p>
+    <pre class="output">
+apple
+banana
+    </pre>
+</div>
+<div class="point">
+    <h3>4. How to skip an iteration of a for loop?</h3>
+    <p>You can use the continue statement to skip the current iteration of the loop and move to the next one. For example, you can use a continue statement to skip the fruit "banana" and only print the other fruits:</p>
+    <pre class="example">
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    if x == "banana":
+        continue
+    print(x)
+    </pre>
+    <p>This code will print:</p>
+    <pre class="output">
+apple
+cherry
+    </pre>
+</div>
+<div class="point">
+    <h3>5. How to generate a sequence of numbers for a for loop?</h3>
+    <p>You can use the range() function to generate a sequence of numbers that you can loop over. For example, you can use the range() function to print the numbers from 0 to 9:</p>
+    <pre class="example">
+for x in range(10):
+    print(x)
+    </pre>
+    <p>This code will print:</p>
+    <pre class="output">
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+    </pre>
+    <p>Note that the range() function starts from 0 by default and excludes the end value. You can also specify the start, end, and step values for the range() function. For example, you can use the range() function to print the odd numbers from 1 to 9:</p>
+    <pre class="example">
+for x in range(1, 10, 2):
+    print(x)
+    </pre>
+    <p>This code will print:</p>
+    <pre class="output">
+1
+3
+5
+7
+9
+    </pre>
+</div>
+<div class="point">
+    <h3>6. How to execute a block of code after a for loop?</h3>
+    <p>You can use the else clause after the for loop to execute a block of code when the loop is finished. For example, you can use the else clause to print a message when the loop is over:</p>
+    <pre class="example">
+for x in range(10):
+    print(x)
+else:
+    print("The loop is done")
+    </pre>
+    <p>This code will print:</p>
+    <pre class="output">
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+The loop is done
+    </pre>
+    <p>Note that the else clause will not be executed if the loop is stopped by a break statement.</p>
+</div>
+ 
+    <h2>List Comprehensions</h2>
+<div class="point">
+    <h3>1. What is a list comprehension?</h3>
+    <p>A list comprehension in Python is a concise way to create a new list from an existing iterable, such as a list, a tuple, a string, or a range. You can use a list comprehension to apply a function or a condition to each element of the iterable and collect the results in a new list. For example, you can use a list comprehension to create a list of squares from a range of numbers:</p>
+    <pre class="example">
+squares = [x**2 for x in range(10)]
+# squares is [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+    </pre>
+</div>
+<div class="point">
+    <h3>2. How to write a list comprehension?</h3>
+    <p>The syntax of a list comprehension in Python is:</p>
+    <pre class="example">
+new_list = [expression for item in iterable if condition]
+    </pre>
+    <p>The expression is the operation that you want to apply to each item in the iterable. The condition is an optional filter that only includes the items that satisfy it. The new_list is the resulting list that contains the expression values for each item in the iterable that meets the condition.</p>
+</div>
+<div class="point">
+    <h3>3. Why use a list comprehension?</h3>
+    <p>List comprehensions are useful because they can simplify your code, make it more readable, and improve its performance. However, you should also be careful not to use them excessively or inappropriately, as they can make your code harder to understand or debug.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/class.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a class="reg" href="#signup">Sign Up</a>
+        <a class="reg" href="#signin">Sign In</a>
+      </div>
+
+    <h1>Working with Strings & Dictionaries</h1>
+    <p class="desc">Working with 2 fundamental data types in Python.</p>
+
+    <h2 class="first">Working with Strings</h2>
+    <div class="point">
+        <h3>1. What is a string?</h3>
+        <p>A string is a sequence of characters, such as "hello" or 'Python'. You can use single or double quotes to create a string, but they must match. For example:</p>
+        <pre class="example">name = "Alice"
+greeting = 'Hello'
+        </pre>
+    </div>
+    <div class="point">
+        <h3>2. What can a string contain?</h3>
+        <p>A string can contain any character, including letters, numbers, symbols, spaces, and escape sequences. Escape sequences are special characters that start with a backslash \ and have a specific meaning. For example, \n means a new line, \t means a tab, and \" means a double quote. For example:</p>
+        <pre class="example">sentence = "She said, \"I love Python.\""
+print(sentence)
+        </pre>
+        <p>This code will print:</p>
+        <pre class="output">
+    She said, "I love Python."
+        </pre>
+    </div>
+    <div class="point">
+        <h3>3. How to access the characters of a string?</h3>
+        <p>You can access the characters of a string by using their index, which starts from 0. You can use square brackets [] to get the character at a specific position. For example:</p>
+        <pre class="example">word = "Python"
+print(word[0]) # P
+print(word[5]) # n
+        </pre>
+        <p>You can also use negative indexes to get the characters from the end of the string. For example:</p>
+        <pre class="example">word = "Python"
+print(word[-1]) # n
+print(word[-6]) # P
+        </pre>
+    </div>
+    <div class="point">
+        <h3>4. How to get a substring from a string?</h3>
+        <p>You can use slicing to get a substring from a string. Slicing uses the syntax [start:end:step], where start is the starting index, end is the ending index (exclusive), and step is the increment. For example:</p>
+        <pre class="example">word = "Python"
+print(word[1:4]) # yth
+print(word[:3]) # Pyt
+print(word[3:]) # hon
+print(word[::2]) # Pto
+print(word[::-1]) # nohtyP
+        </pre>
+    </div>
+    <div class="point">
+        <h3>5. How to concatenate and repeat strings?</h3>
+        <p>You can use the + operator to concatenate two strings, or the * operator to repeat a string. For example:</p>
+        <pre class="example">first_name = "Alice"
+last_name = "Smith"
+full_name = first_name + " " + last_name
+print(full_name) # Alice Smith
+    
+word = "ha"
+laugh = word * 3
+print(laugh) # haha
+        </pre>
+    </div>
+    <div class="point">
+        <h3>6. How to get the length of a string and check if a substring is in a string?</h3>
+        <p>You can use the len() function to get the length of a string, or the in operator to check if a substring is in a string. For example:</p>
+        <pre class="example">name = "Alice"
+print(len(name)) # 5
+print("A" in name) # True
+print("Z" in name) # False
+        </pre>
+    </div>
+    <div class="point">
+        <h3>7. How to convert other data types to strings and insert values into a string?</h3>
+        <p>You can use the str() function to convert other data types to strings, or the format() method to insert values into a string. For example:</p>
+        <pre class="example">age = 25
+message = "I am " + str(age) + " years old."
+print(message) # I am 25 years old.
+
+name = "Alice"
+greeting = "Hello, {}!"
+print(greeting.format(name)) # Hello, Alice!
+        </pre>
+    </div>
+    <div class="point">
+        <h3>8. How to manipulate strings with built-in methods?</h3>
+        <p>You can use many built-in methods to manipulate strings, such as upper(), lower(), replace(), split(), join(), strip(), find(), count(), etc. For example:</p>
+        <pre class="example">name = "Alice"
+print(name.upper()) # ALICE
+print(name.lower()) # alice
+print(name.replace("A", "E")) # Elise
+print(name.split("l")) # ['A', 'ice']
+
+words = ["Hello", "world"]
+print(" ".join(words)) # Hello world
+
+sentence = "  This is a sentence.  "
+print(sentence.strip()) # This is a sentence.
+print(sentence.find("is")) # 3
+print(sentence.count("e")) # 3
+        </pre>
+    </div>
+
+    <h2>Working with Dictionaries</h2>
+<div class="point">
+    <h3>1. What is a dictionary?</h3>
+    <p>A dictionary in Python is a data structure that stores key-value pairs, where each key is associated with a value. You can use dictionaries to store and retrieve information by using the keys as indexes. For example, you can use a dictionary to store the names and ages of your friends:</p>
+    <pre class="example">
+friends = {"Alice": 25, "Bob": 26, "Charlie": 27}
+    </pre>
+</div>
+<div class="point">
+    <h3>2. How to create a dictionary?</h3>
+    <p>To create a dictionary, you can use curly braces {} and separate the key-value pairs by commas. You can also use the dict() function and pass a list of tuples as an argument. For example, the above dictionary can also be created like this:</p>
+    <pre class="example">
+friends = dict([("Alice", 25), ("Bob", 26), ("Charlie", 27)])
+    </pre>
+</div>
+<div class="point">
+    <h3>3. How to access the value of a key?</h3>
+    <p>To access the value of a key, you can use square brackets [] and specify the key name. For example, to get the age of Alice, you can do this:</p>
+    <pre class="example">
+print(friends["Alice"]) # 25
+    </pre>
+</div>
+<div class="point">
+    <h3>4. How to add, update, and delete key-value pairs?</h3>
+    <p>To add a new key-value pair to a dictionary, you can assign a value to a new key. For example, to add a new friend named David with age 28, you can do this:</p>
+    <pre class="example">
+friends["David"] = 28
+    </pre>
+    <p>To update the value of an existing key, you can assign a new value to the key. For example, to change the age of Bob to 27, you can do this:</p>
+    <pre class="example">
+friends["Bob"] = 27
+    </pre>
+    <p>To delete a key-value pair from a dictionary, you can use the del keyword and specify the key name. For example, to remove Charlie from the dictionary, you can do this:</p>
+    <pre class="example">
+del friends["Charlie"]
+    </pre>
+</div>
+<div class="point">
+    <h3>5. How to iterate over a dictionary?</h3>
+    <p>To iterate over a dictionary, you can use a for loop and the items() method, which returns a list of tuples containing the key-value pairs. For example, to print each key and value in the dictionary, you can do this:</p>
+    <pre class="example">
+for key, value in friends.items():
+    print(key, value)
+    </pre>
+</div>
+<div class="point">
+    <h3>6. How to check if a key exists in a dictionary and get the number of key-value pairs?</h3>
+    <p>To check if a key exists in a dictionary, you can use the in operator. For example, to check if Alice is in the dictionary, you can do this:</p>
+    <pre class="example">
+print("Alice" in friends) # True
+    </pre>
+    <p>To get the number of key-value pairs in a dictionary, you can use the len() function. For example, to get the size of the dictionary, you can do this:</p>
+    <pre class="example">
+print(len(friends)) # 3
+    </pre>
+</div>
+
+</body>
+</html>

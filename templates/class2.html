@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/class.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a class="reg" href="#signup">Sign Up</a>
+        <a class="reg" href="#signin">Sign In</a>
+      </div>
+
+    <h1>Creating & Calling Functions</h1>
+    <p class="desc">Learn how to create and call your own functions.</p>
+
+    <h2 class="first">Creating Functions</h2>
+    <div class="point">
+        <h3>1. Define the function</h3>
+        <p>Start with the <code>def</code> keyword to tell Python you're defining a function.</p>
+        <pre class="example">def</pre>
+    </div>
+    <div class="point">
+        <h3>2. Name the function</h3>
+        <p>After <code>def</code>, write the name of your function. Let's call our function <code>greet</code>.</p>
+        <pre class="example">def greet</pre>
+    </div>
+    <div class="point">
+        <h3>3. Add parameters in parentheses</h3>
+        <p>If your function needs any inputs, you can put them in parentheses after the function name. In our case, we want to greet a person, so we'll need their name as an input. We'll call this input <code>name</code>.</p>
+        <pre class="example">def greet(name)</pre>
+    </div>
+    <div class="point">
+        <h3>4. End the first line with a colon</h3>
+        <p>This tells Python that the next lines will be the body of the function.</p>
+        <pre class="example">def greet(name):</pre>
+    </div>
+    <div class="point">
+        <h3>5. Write the function body</h3>
+        <p>This is where you put the code that runs when the function is called. In our case, we want to return a greeting message. Python uses indentation to define blocks of code, so make sure to indent the function body.</p>
+        <pre class="example">def greet(name):
+    return f"Hello, {name}!"</pre>
+    </div>
+    <div class="point">
+        <h3>6. Call the function</h3>
+        <p>Now that the function is defined, you can call it by using its name followed by parentheses containing the arguments. Here's how you can call the <code>greet</code> function with the argument <code>"Alice"</code>.</p>
+        <pre class="example">print(greet("Alice"))</pre>
+    </div>
+
+    <h2>Calling Functions</h2>
+    <div class="point">
+        <h3>1. Identify the function</h3>
+        <p>You need to know the name of the function you want to call. For example, let's say we have a function named <code>greet</code> that we defined earlier.</p>
+        <pre class="example">def greet(name):
+    return f"Hello, {name}!"</pre>
+    </div>
+    <div class="point">
+        <h3>2. Prepare the arguments</h3>
+        <p>Look at the function definition to see what arguments it requires. Our <code>greet</code> function requires one argument: <code>name</code>.</p>
+        <pre class="example">def greet(name):
+    return f"Hello, {name}!"</pre>
+    </div>
+    <div class="point">
+        <h3>3. Call the function</h3>
+        <p>To call the function, write the function's name followed by parentheses. Inside the parentheses, provide the arguments. For the <code>greet</code> function, you could call it with the argument <code>"Alice"</code> like this.</p>
+        <pre class="example">greet("Alice")</pre>
+    </div>
+    <div class="point">
+        <h3>4. Use the function's output</h3>
+        <p>If the function returns a value, you can use this value in your code. For example, you could print the result of the <code>greet</code> function:</p>
+        <pre class="example">print(greet("Alice"))</pre>
+    </div>
+
+    <h2>Passing Functions as Arguments</h2>
+    <div class="point">
+        <h3>1. Define the first function</h3>
+        <p>We start by defining a function <code>say_hello</code> that takes one argument <code>name</code> and returns a greeting string.</p>
+        <pre class="example">def say_hello(name):
+    return f"Hello, {name}!"</pre>
+    </div>
+    <div class="point">
+        <h3>2. Define the second function</h3>
+        <p>Next, we define another function <code>greet</code> that takes two arguments: a function <code>func</code> and a <code>name</code>. Inside <code>greet</code>, it calls <code>func(name)</code> and returns the result.</p>
+        <pre class="example">def greet(func, name):
+    return func(name)</pre>
+    </div>
+    <div class="point">
+        <h3>3. Prepare the arguments for the function call</h3>
+        <p>Now that we have our functions defined, we need to prepare the arguments for the function call. In this case, our <code>greet</code> function requires a function and a name as arguments. We already have our <code>say_hello</code> function and let's use <code>"Alice"</code> as the name.</p>
+        <pre class="example">def greet(func, name):
+    return func(name)</pre>
+    </div>
+    <div class="point">
+        <h3>4. Call the function with another function as an argument</h3>
+        <p>Finally, we call our <code>greet</code> function with <code>say_hello</code> as the function argument and <code>"Alice"</code> as the name argument.</p>
+        <pre class="example">print(greet(say_hello, "Alice"))</pre>
+    </div>
+    <div class="point">
+        <h3>5. Run the code</h3>
+        <p>When you run this code, the <code>greet</code> function calls <code>say_hello("Alice")</code>, which returns <code>"Hello, Alice!"</code>. This result is then printed out.</p>
+        <pre class="example">print(greet(say_hello, "Alice"))  # prints: Hello, Alice!</pre>
+    </div>
+
+</body>
+</html>

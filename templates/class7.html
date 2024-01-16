@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/class.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a class="reg" href="#signup">Sign Up</a>
+        <a class="reg" href="#signin">Sign In</a>
+      </div>
+
+    <h1>Jumping into The Land of External Libraries</h1>
+    <p class="desc">Learning how to use imports and work with External Python Libraries.</p>
+
+    <h2 class="first">Python Imports</h2>
+    <div class="point">
+        <h3>1. What is an import?</h3>
+        <p>An import is a way to use code from other modules or packages in your own program. A module is a file that contains Python code, and a package is a collection of modules. You can use the import keyword to access the functions, classes, variables, and other objects defined in another module or package. For example, you can import the math module to use its mathematical functions:</p>
+        <pre class="example">import math
+print(math.sqrt(25)) # 5.0
+        </pre>
+    </div>
+    <div class="point">
+        <h3>2. How to import specific objects or everything from a module or package?</h3>
+        <p>You can also use the from keyword to import specific objects from a module or package, or use the * symbol to import everything. For example, you can import the sqrt function from the math module like this:</p>
+        <pre class="example">from math import sqrt
+print(sqrt(25)) # 5.0
+        </pre>
+        <p>Or you can import everything from the math module like this:</p>
+        <pre class="example">from math import *
+print(pi) # 3.141592653589793
+        </pre>
+        <p>However, it is not recommended to use the * symbol, as it can cause name conflicts and make your code less readable.</p>
+    </div>
+    <div class="point">
+        <h3>3. How to give an alias to a module or an object that you import?</h3>
+        <p>You can also use the as keyword to give an alias to a module or an object that you import. This can make your code shorter and avoid name conflicts. For example, you can import the numpy module as np and use it like this:</p>
+        <pre class="example">import numpy as np
+a = np.array([1, 2, 3])
+print(a) # [1 2 3]
+        </pre>
+    </div>
+    <div class="point">
+        <h3>4. What are some external libraries and how to install and use them?</h3>
+        <p>Python has many external libraries that are not part of the standard library, but can provide additional features and capabilities. These libraries are often developed and maintained by the Python community, and can be found on the Python Package Index (PyPI), which is a repository of software for Python.</p>
+        <p>Some of the most popular external libraries for Python are:</p>
+        <ul>
+            <li>numpy: a library for scientific computing and working with arrays and matrices</li>
+            <li>pandas: a library for data analysis and manipulation</li>
+            <li>matplotlib: a library for data visualization and plotting</li>
+            <li>scipy: a library for scientific and technical computing</li>
+        </ul>
+        <p>To use these external libraries, you need to install them first. There are different ways to install external libraries, but one of the most common and convenient ways is to use the pip tool. Pip is a package manager that can install and manage packages from PyPI. You can use the pip install command to install a package, followed by the name of the package. For example, to install numpy, you can run this command in your terminal:</p>
+        <pre class="example">pip install numpy
+        </pre>
+        
+</body>
+</html>

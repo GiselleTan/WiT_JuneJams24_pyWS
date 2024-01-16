@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/class.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a class="reg" href="#signup">Sign Up</a>
+        <a class="reg" href="#signin">Sign In</a>
+      </div>
+
+    <h1>Booleans & Conditionals</h1>
+    <p class="desc">Learn about Boolean Values and Conditional Statements in Python.</p>
+
+    <h2 class="first">Boolean Values</h2>
+    <div class="point">
+        <h3>1. Understanding Boolean Values</h3>
+        <p>In Python, the two Boolean values are <code>True</code> and <code>False</code>. They must be capitalized.</p>
+        <pre class="example">print(True)  # prints: True
+print(False)  # prints: False</pre>
+    </div>
+    <div class="point">
+        <h3>2. Boolean Operations</h3>
+        <p>Python includes several operations that return Boolean values, including comparisons (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>) and logical operations (<code>and</code>, <code>or</code>, <code>not</code>).</p>
+        <pre class="example">print(5 == 5)  # prints: True
+print(5 > 10)  # prints: False
+print(True and False)  # prints: False
+print(True or False)  # prints: True
+print(not True)  # prints: False</pre>
+    </div>
+    <div class="point">
+        <h3>3. Using Booleans in Conditions</h3>
+        <p>Boolean values are often used in conditional statements, like <code>if</code> statements.</p>
+        <pre class="example">if 5 > 2:
+    print("Five is greater than two!")  # This will be printed
+if 2 > 5:
+    print("Two is greater than five!")  # This will not be printed</pre>
+    </div>
+    <div class="point">
+        <h3>4. Converting to Booleans</h3>
+        <p>You can convert other data types to Booleans using the <code>bool()</code> function. By default, <code>bool()</code> returns <code>False</code> for values that are empty or <code>0</code>, and <code>True</code> otherwise.</p>
+        <pre class="example">print(bool(0))  # prints: False
+print(bool(1))  # prints: True
+print(bool(""))  # prints: False
+print(bool("Hello"))  # prints: True</pre>
+    </div>
+
+    <h2>Conditional Statements</h2>
+    <div class="point">
+        <h3>1. Understanding the if statement</h3>
+        <p>The if statement is the most basic form of conditional branching. It allows for the execution of a statement or group of statements based on the value of an expression. Here’s a simple example:</p>
+        <pre class="example">if 1 > 0:
+    print("One is greater than zero")
+        </pre>
+    </div>
+    <div class="point">
+        <h3>2. The else clause</h3>
+        <p>The else clause can be used along with the if statement to specify a block of code to be executed if the condition is False:</p>
+        <pre class="example">if 1 < 0:
+    print("One is less than zero")
+else:
+    print("One is not less than zero")
+        </pre>
+    </div>
+    <div class="point">
+        <h3>3. The elif clause</h3>
+        <p>The elif (short for ‘else if’) clause allows you to check multiple expressions for True and execute a block of code as soon as one of the conditions evaluates to True:</p>
+        <pre class="example">x = 20
+if x < 0:
+    print("x is less than zero")
+elif x == 0:
+    print("x is zero")
+else:
+    print("x is greater than zero")
+        </pre>
+    </div>
+    <div class="point">
+        <h3>4. Nested conditions</h3>
+        <p>You can have if/else constructs within another if/else construct. This is called nesting.</p>
+        <pre class="example">if x <= 0:
+    if x = 0:
+        print("x is equal to zero")
+    else:
+        print("x is less than zero")
+else:
+    print("x is greater than zero")
+        </pre>
+    </div>
+    <div class="point">
+        <h3>5. Conditional expressions (Ternary Operator)</h3>
+        <p>Python’s ternary operator allows you to use if/else statements inline within your code:</p>
+        <pre class="example">x = 10
+message = "x is less than 20" if x < 20 else "x is not less than 20"
+print(message)
+        </pre>
+    </div>
+
+</body>
+</html>
